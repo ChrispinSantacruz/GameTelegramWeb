@@ -1,0 +1,381 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Retro Gaming Font - Using system fonts that work everywhere */
+.retro-font {
+  font-family: "Courier New", "Monaco", "Menlo", "Consolas", monospace;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/* Glow Effects */
+.glow-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+.retro-border {
+  box-shadow: 0 0 10px #00ffff, inset 0 0 10px #00ffff;
+}
+
+.retro-card {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.retro-card:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Gaming Animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Platform Bounce Animation (Mario-style) */
+@keyframes platform-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.platform-bounce {
+  animation: platform-bounce 2s ease-in-out infinite;
+}
+
+.platform-bounce-delay {
+  animation: platform-bounce 2s ease-in-out infinite 0.5s;
+}
+
+.platform-bounce-delay-2 {
+  animation: platform-bounce 2s ease-in-out infinite 1s;
+}
+
+/* Coin Spin Animation */
+@keyframes coin-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.coin-spin {
+  animation: coin-spin 1.5s linear infinite;
+  box-shadow: 0 0 10px #fbbf24;
+}
+
+.coin-spin-delay {
+  animation: coin-spin 1.5s linear infinite 0.3s;
+  box-shadow: 0 0 10px #fbbf24;
+}
+
+.coin-spin-delay-2 {
+  animation: coin-spin 1.5s linear infinite 0.6s;
+  box-shadow: 0 0 10px #fbbf24;
+}
+
+/* Pixel Cloud Animation */
+@keyframes cloud-float {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+.pixel-cloud {
+  width: 40px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  opacity: 0.7;
+  animation: cloud-float 4s ease-in-out infinite;
+}
+
+.pixel-cloud-delay {
+  width: 40px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  opacity: 0.7;
+  animation: cloud-float 4s ease-in-out infinite 1s;
+}
+
+/* Question Block Animation */
+@keyframes question-block {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.question-block {
+  animation: question-block 2s ease-in-out infinite;
+}
+
+.question-block-delay {
+  animation: question-block 2s ease-in-out infinite 1s;
+}
+
+/* Space Invader Movement */
+@keyframes invader-move {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+.invader-move {
+  animation: invader-move 2s ease-in-out infinite;
+}
+
+.invader-move-delay {
+  animation: invader-move 2s ease-in-out infinite 0.5s;
+}
+
+.invader-move-delay-2 {
+  animation: invader-move 2s ease-in-out infinite 1s;
+}
+
+.pixel-invader {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+/* Laser Beam Animation */
+@keyframes laser-beam {
+  0% {
+    height: 0;
+    opacity: 1;
+  }
+  50% {
+    height: 200px;
+    opacity: 0.8;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.laser-beam {
+  animation: laser-beam 3s ease-in-out infinite;
+}
+
+.laser-beam-delay {
+  animation: laser-beam 3s ease-in-out infinite 1.5s;
+}
+
+/* UFO Movement */
+@keyframes ufo-move {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+
+.ufo-move {
+  animation: ufo-move 8s linear infinite;
+}
+
+/* Pac-Man Trail */
+@keyframes pacman-trail {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 50px));
+  }
+}
+
+.pacman-trail {
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(to right, #fbbf24 0px, #fbbf24 10px, transparent 10px, transparent 20px);
+  animation: pacman-trail 6s linear infinite;
+}
+
+.pacman-trail-reverse {
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(to left, #fbbf24 0px, #fbbf24 10px, transparent 10px, transparent 20px);
+  animation: pacman-trail 6s linear infinite reverse;
+}
+
+.pacman-trail-delay {
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(to right, #fbbf24 0px, #fbbf24 10px, transparent 10px, transparent 20px);
+  animation: pacman-trail 6s linear infinite 3s;
+}
+
+/* Tetris Block Animation */
+@keyframes tetris-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+.tetris-block {
+  width: 20px;
+  height: 20px;
+  background: #8b5cf6;
+  animation: tetris-fall 2s ease-in-out infinite;
+}
+
+.tetris-block-delay {
+  width: 20px;
+  height: 20px;
+  background: #06b6d4;
+  animation: tetris-fall 2s ease-in-out infinite 0.8s;
+}
+
+/* Power-up Pulse */
+@keyframes power-up-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+.power-up-pulse {
+  animation: power-up-pulse 2s ease-in-out infinite;
+}
+
+.power-up-pulse-delay {
+  animation: power-up-pulse 2s ease-in-out infinite 1s;
+}
+
+/* Retro Scroll Indicator */
+.retro-scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
