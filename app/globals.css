@@ -75,9 +75,23 @@
   font-weight: bold;
 }
 
+/* Mobile optimizations for retro font */
+@media (max-width: 640px) {
+  .retro-font {
+    letter-spacing: 0.05em;
+  }
+}
+
 /* Glow Effects */
 .glow-text {
   text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+/* Mobile optimization for glow effects */
+@media (max-width: 768px) {
+  .glow-text {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+  }
 }
 
 .retro-border {
@@ -92,6 +106,13 @@
 .retro-card:hover {
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
   transform: translateY(-2px);
+}
+
+/* Reduce transform effects on mobile for better performance */
+@media (max-width: 768px) {
+  .retro-card:hover {
+    transform: none;
+  }
 }
 
 /* Gaming Animations */
@@ -158,6 +179,15 @@
 .coin-spin-delay-2 {
   animation: coin-spin 1.5s linear infinite 0.6s;
   box-shadow: 0 0 10px #fbbf24;
+}
+
+/* Reduce box-shadow on mobile for better performance */
+@media (max-width: 768px) {
+  .coin-spin,
+  .coin-spin-delay,
+  .coin-spin-delay-2 {
+    box-shadow: 0 0 5px #fbbf24;
+  }
 }
 
 /* Pixel Cloud Animation */
@@ -377,5 +407,126 @@
   }
   90% {
     transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Reduce animation distances on mobile */
+@media (max-width: 768px) {
+  @keyframes bounce {
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+      transform: translate3d(0, -5px, 0);
+    }
+    70% {
+      transform: translate3d(0, -3px, 0);
+    }
+    90% {
+      transform: translate3d(0, -1px, 0);
+    }
+  }
+}
+
+/* Crypto floating animation */
+@keyframes crypto-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+}
+
+.crypto-float {
+  animation: crypto-float 3s ease-in-out infinite;
+}
+
+.crypto-float-delay {
+  animation: crypto-float 3s ease-in-out infinite 1s;
+}
+
+.crypto-float-delay-2 {
+  animation: crypto-float 3s ease-in-out infinite 2s;
+}
+
+/* Pipe movement animation */
+@keyframes pipe-move {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.pipe-move {
+  animation: pipe-move 4s ease-in-out infinite;
+}
+
+.pipe-move-delay {
+  animation: pipe-move 4s ease-in-out infinite 2s;
+}
+
+/* Add missing pacman-dots animation */
+@keyframes pacman-dots-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.pacman-dots {
+  width: 8px;
+  height: 8px;
+  background: #fbbf24;
+  border-radius: 50%;
+  animation: pacman-dots-blink 1s ease-in-out infinite;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile */
+  .platform-bounce,
+  .platform-bounce-delay,
+  .platform-bounce-delay-2 {
+    animation-duration: 3s;
+  }
+  
+  .invader-move,
+  .invader-move-delay,
+  .invader-move-delay-2 {
+    animation-duration: 3s;
+  }
+  
+  /* Simplify transforms on mobile */
+  @keyframes cloud-float {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+  
+  @keyframes crypto-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }

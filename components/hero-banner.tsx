@@ -2,15 +2,15 @@ import { Bot, Share2, TrendingUp } from "lucide-react"
 
 export default function HeroBanner() {
   return (
-    <section className="relative min-h-[120vh] flex items-center justify-center overflow-hidden mt-16">
+    <section className="relative min-h-[100vh] lg:min-h-[120vh] flex items-center justify-center overflow-hidden mt-16">
       {/* Gaming Background with Diagonal Split */}
       <div className="absolute inset-0">
         {/* Left side - SMK Gaming Section */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-800 via-green-700 to-green-600">
           <div className="absolute inset-0 bg-black/20" />
 
-          {/* Mario-style platforms and elements */}
-          <div className="absolute inset-0 overflow-hidden">
+          {/* Mario-style platforms and elements - Hide on mobile for better performance */}
+          <div className="hidden md:block absolute inset-0 overflow-hidden">
             {/* Animated platforms */}
             <div className="absolute bottom-32 left-16 w-20 h-6 bg-green-500 rounded platform-bounce"></div>
             <div className="absolute bottom-48 left-40 w-20 h-6 bg-green-500 rounded platform-bounce-delay"></div>
@@ -43,8 +43,8 @@ export default function HeroBanner() {
         <div className="absolute inset-0 bg-gradient-to-bl from-blue-800 via-blue-700 to-blue-600">
           <div className="absolute inset-0 bg-black/20" />
 
-          {/* Space Invaders/Galaga style elements */}
-          <div className="absolute inset-0 overflow-hidden">
+          {/* Space Invaders/Galaga style elements - Hide on mobile for better performance */}
+          <div className="hidden md:block absolute inset-0 overflow-hidden">
             {/* Animated invaders */}
             <div className="absolute top-1/4 right-1/4 invader-move">
               <div className="w-10 h-8 bg-blue-400 pixel-invader"></div>
@@ -90,8 +90,8 @@ export default function HeroBanner() {
           >
             <div className="absolute inset-0 bg-black/20" />
 
-            {/* Gaming animations for left side */}
-            <div className="absolute inset-0 overflow-hidden">
+            {/* Gaming animations for left side - Simplified for mobile */}
+            <div className="hidden lg:block absolute inset-0 overflow-hidden">
               <div className="absolute bottom-32 left-16 w-20 h-6 bg-green-500 rounded platform-bounce"></div>
               <div className="absolute bottom-48 left-40 w-20 h-6 bg-green-500 rounded platform-bounce-delay"></div>
               <div className="absolute top-1/4 left-1/4 w-8 h-8 bg-yellow-400 rounded-full coin-spin"></div>
@@ -112,45 +112,45 @@ export default function HeroBanner() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
-        <div className="mb-12">
-          <h1 className="text-3xl md:text-6xl font-bold mb-6 retro-font">
+      <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div className="mb-8 lg:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 lg:mb-6 retro-font">
             <span className="bg-gradient-to-r from-green-400 via-white to-blue-400 bg-clip-text text-transparent glow-text">
               DISCOVER NEXT-GEN GAMING
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed retro-font">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 lg:mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed retro-font px-4">
             EXPERIENCE REVOLUTIONARY TELEGRAM-INTEGRATED GAMES
-            <br />
-            WITH CRYPTOCURRENCY REWARDS AND COMMUNITY BUILDING
+            <br className="hidden sm:block" />
+            <span className="block sm:inline"> WITH CRYPTOCURRENCY REWARDS AND COMMUNITY BUILDING</span>
           </p>
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="retro-card bg-black/80 border-2 border-green-400 rounded-lg p-6">
-            <Bot className="h-10 w-10 text-green-400 mx-auto mb-3" />
-            <h3 className="font-bold text-lg mb-2 retro-font text-green-400">AUTO BOTS</h3>
-            <p className="text-sm text-gray-300 retro-font">INSTANT GAME ACCESS</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
+          <div className="retro-card bg-black/80 border-2 border-green-400 rounded-lg p-4 sm:p-6">
+            <Bot className="h-8 w-8 sm:h-10 sm:w-10 text-green-400 mx-auto mb-2 sm:mb-3" />
+            <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 retro-font text-green-400">AUTO BOTS</h3>
+            <p className="text-xs sm:text-sm text-gray-300 retro-font">INSTANT GAME ACCESS</p>
           </div>
-          <div className="retro-card bg-black/80 border-2 border-blue-400 rounded-lg p-6">
-            <Share2 className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-            <h3 className="font-bold text-lg mb-2 retro-font text-blue-400">SOCIAL SHARE</h3>
-            <p className="text-sm text-gray-300 retro-font">SHARE ACHIEVEMENTS</p>
+          <div className="retro-card bg-black/80 border-2 border-blue-400 rounded-lg p-4 sm:p-6">
+            <Share2 className="h-8 w-8 sm:h-10 sm:w-10 text-blue-400 mx-auto mb-2 sm:mb-3" />
+            <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 retro-font text-blue-400">SOCIAL SHARE</h3>
+            <p className="text-xs sm:text-sm text-gray-300 retro-font">SHARE ACHIEVEMENTS</p>
           </div>
-          <div className="retro-card bg-black/80 border-2 border-green-400 rounded-lg p-6">
-            <TrendingUp className="h-10 w-10 text-green-400 mx-auto mb-3" />
-            <h3 className="font-bold text-lg mb-2 retro-font text-green-400">CRYPTO REWARDS</h3>
-            <p className="text-sm text-gray-300 retro-font">EARN WHILE PLAYING</p>
+          <div className="retro-card bg-black/80 border-2 border-green-400 rounded-lg p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+            <TrendingUp className="h-8 w-8 sm:h-10 sm:w-10 text-green-400 mx-auto mb-2 sm:mb-3" />
+            <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 retro-font text-green-400">CRYPTO REWARDS</h3>
+            <p className="text-xs sm:text-sm text-gray-300 retro-font">EARN WHILE PLAYING</p>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <div className="retro-scroll-indicator">
-          <div className="w-8 h-12 border-2 border-white/70 rounded-full flex justify-center bg-black/50">
-            <div className="w-2 h-4 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-white/70 rounded-full flex justify-center bg-black/50">
+            <div className="w-1.5 h-3 sm:w-2 sm:h-4 bg-white/70 rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>
