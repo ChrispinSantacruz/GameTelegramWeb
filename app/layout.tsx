@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'GamesTelegram',
-  description: 'Play amazing crypto games integrated with Telegram - KokoTheRoach and more!',
+  description: 'Play amazing crypto games integrated with Telegram',
   generator: 'GamesTelegram',
   icons: {
     icon: [
