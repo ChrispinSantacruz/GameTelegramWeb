@@ -18,40 +18,40 @@ export default function GamesSection() {
     description: "🎮 You are a cockroach that shoots bundles of bills to defeat bosses like Trump and Elon.",
     detailedDescription:
       "Take control of Koko, a fearless cockroach armed with bundles of cash! Battle through intense boss fights against iconic figures like Trump (who attacks with bombs) and Elon (who launches rockets). Survive the chaos with special power-ups and climb the leaderboards in this wild, satirical shooter.",
-    mainImage: "/placeholder.svg?height=300&width=500",
+    mainImage: "/Kokok/Principal.png",
     secondaryImages: [
       {
-        url: "/placeholder.svg?height=200&width=300",
-        title: "Batalla contra Trump",
-        badge: "Boss Battle"
+        url: "/Kokok/Menu.png",
+        title: "Game Menu",
+        badge: "Menu"
       },
       {
-        url: "/placeholder.svg?height=200&width=300", 
-        title: "Combate con Elon",
-        badge: "Space Combat"
+        url: "/Kokok/instrucciones.png", 
+        title: "Game Instructions",
+        badge: "Instructions"
       },
       {
-        url: "/placeholder.svg?height=200&width=300",
-        title: "Power-ups Especiales",
-        badge: "Power-ups"
+        url: "/Kokok/GameOver.png",
+        title: "Game Over Screen",
+        badge: "Game Over"
       },
       {
-        url: "/placeholder.svg?height=200&width=300",
-        title: "Modo Supervivencia",
-        badge: "Survival"
+        url: "/Kokok/Responsive.png",
+        title: "Responsive Design",
+        badge: "Mobile"
       },
       {
-        url: "/placeholder.svg?height=200&width=300",
-        title: "Tabla de Puntuaciones",
-        badge: "Leaderboard"
+        url: "/Kokok/GameoverBot.png",
+        title: "Score Sharing Bot",
+        badge: "Bot Feature"
       },
       {
-        url: "/placeholder.svg?height=200&width=300",
-        title: "Personalizaciones",
-        badge: "Customization"
+        url: "/Kokok/BotStart.png",
+        title: "Welcome Bot",
+        badge: "Telegram Bot"
       }
     ],
-    playLink: "https://t.me/kokotheroachbot",
+    playLink: "https://kokokthegame.vercel.app/",
     tags: ["Boss Battles", "Satirical", "Mobile & PC"],
     stats: {
       players: "25K+",
@@ -118,21 +118,21 @@ export default function GamesSection() {
   const testimonials = [
     {
       name: "Alex M.",
-      message: "¡KokoTheRoach es adictivo! No puedo parar de jugar, especialmente las batallas contra los jefes.",
+      message: "KokoTheRoach is addictive! I can't stop playing, especially the boss battles.",
       rating: 5,
-      country: "🇲🇽 México"
+      country: "🇲🇽 Mexico"
     },
     {
       name: "Sarah K.",
-      message: "Los gráficos pixel art son increíbles y el gameplay es súper fluido. ¡Recomendado!",
+      message: "The pixel art graphics are incredible and the gameplay is super smooth. Recommended!",
       rating: 5,
       country: "🇺🇸 USA"
     },
     {
       name: "Carlos R.",
-      message: "Me encanta poder compartir mi puntuación directamente en Telegram con mis amigos.",
+      message: "I love being able to share my score directly on Telegram with my friends.",
       rating: 4,
-      country: "🇪🇸 España"
+      country: "🇪🇸 Spain"
     }
   ]
 
@@ -140,25 +140,25 @@ export default function GamesSection() {
     {
       icon: <Users className="h-8 w-8 text-blue-400" />,
       value: "45K+",
-      label: "Jugadores Activos",
+      label: "Active Players",
       color: "blue"
     },
     {
       icon: <Trophy className="h-8 w-8 text-yellow-400" />,
       value: "2.5M",
-      label: "Partidas Jugadas",
+      label: "Games Played",
       color: "yellow"
     },
     {
       icon: <Crown className="h-8 w-8 text-purple-400" />,
       value: "156",
-      label: "Records Establecidos",
+      label: "Records Set",
       color: "purple"
     },
     {
       icon: <Zap className="h-8 w-8 text-green-400" />,
       value: "98%",
-      label: "Satisfacción",
+      label: "Satisfaction",
       color: "green"
     }
   ]
@@ -185,9 +185,9 @@ export default function GamesSection() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 retro-font">NUESTRO JUEGO DESTACADO</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 retro-font">OUR FEATURED GAME</h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-            Experimenta nuestro último y más emocionante juego integrado con Telegram
+            Experience our latest and most exciting game integrated with Telegram
           </p>
         </div>
 
@@ -199,41 +199,51 @@ export default function GamesSection() {
               <div className="relative overflow-hidden rounded-lg">
                 <Image
                   src={game.mainImage || "/placeholder.svg"}
-                  alt={`${game.title} - Screenshot Principal`}
+                  alt={`${game.title} - Main Screenshot`}
                   width={500}
                   height={300}
                   className="w-full h-48 sm:h-56 lg:h-64 object-cover border-2 border-cyan-400/50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4">
-                  <Badge className="bg-cyan-600/90 text-white border border-cyan-400 text-xs sm:text-sm">Modo Boss Battle</Badge>
+                  <Badge className="bg-cyan-600/90 text-white border border-cyan-400 text-xs sm:text-sm">Boss Battle Mode</Badge>
                 </div>
                 <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
-                  <Badge className="bg-red-600/90 text-white border border-red-400 text-xs sm:text-sm">🪳 Destacado</Badge>
+                  <Badge className="bg-red-600/90 text-white border border-red-400 text-xs sm:text-sm">🪳 Featured</Badge>
                 </div>
               </div>
 
-              {/* Secondary Images Grid - 2x3 with increased height */}
+              {/* Secondary Images Grid - 2x3 with enhanced zoom effect */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {game.secondaryImages.map((image, index) => (
-                  <div key={index} className="relative overflow-hidden rounded-lg group">
+                  <div key={index} className="relative overflow-hidden rounded-lg group cursor-pointer">
                     <Image
                       src={image.url}
                       alt={image.title}
                       width={300}
                       height={220}
-                      className="w-full h-36 sm:h-40 lg:h-44 object-cover border border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 group-hover:scale-105"
+                      className="w-full h-36 sm:h-40 lg:h-44 object-cover border border-cyan-400/30 hover:border-cyan-400 transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                    <div className="absolute bottom-1 sm:bottom-2 left-1 sm:left-2 right-1 sm:right-2">
-                      <Badge className="bg-purple-600/90 text-white border border-purple-400 text-xs">
-                        {image.badge}
-                      </Badge>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute bottom-1 sm:bottom-2 left-1 sm:left-2 right-1 sm:right-2 transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <div className="bg-black/80 backdrop-blur-sm rounded px-2 py-1 border border-cyan-400/50">
+                        <p className="text-cyan-400 text-xs sm:text-sm font-bold retro-font text-center">
+                          {image.title}
+                        </p>
+                        <div className="flex justify-center mt-1">
+                          <span className="bg-purple-600/90 text-white border border-purple-400 rounded-full px-2 py-0.5 text-xs retro-font">
+                            {image.badge}
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-white text-xs sm:text-sm font-bold retro-font text-center px-2">
-                        {image.title}
-                      </span>
+                    {/* Zoom indicator */}
+                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-black/80 rounded-full p-1">
+                        <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -270,28 +280,9 @@ export default function GamesSection() {
                   </CardDescription>
                 </div>
 
-                {/* Game Stats */}
-                <div className="grid grid-cols-3 gap-2 sm:gap-4">
-                  <div className="text-center p-2 sm:p-3 bg-slate-700/50 rounded-lg border border-cyan-400/30">
-                    <Users className="h-4 w-4 sm:h-6 sm:w-6 text-cyan-400 mx-auto mb-1 sm:mb-2" />
-                    <div className="text-cyan-400 font-bold retro-font text-xs sm:text-sm">{game.stats.players}</div>
-                    <div className="text-gray-400 text-xs retro-font">JUGADORES</div>
-                  </div>
-                  <div className="text-center p-2 sm:p-3 bg-slate-700/50 rounded-lg border border-green-400/30">
-                    <Trophy className="h-4 w-4 sm:h-6 sm:w-6 text-green-400 mx-auto mb-1 sm:mb-2" />
-                    <div className="text-green-400 font-bold retro-font text-xs sm:text-sm">{game.stats.rewards}</div>
-                    <div className="text-gray-400 text-xs retro-font">RECOMPENSAS</div>
-                  </div>
-                  <div className="text-center p-2 sm:p-3 bg-slate-700/50 rounded-lg border border-yellow-400/30">
-                    <Star className="h-4 w-4 sm:h-6 sm:w-6 text-yellow-400 mx-auto mb-1 sm:mb-2" />
-                    <div className="text-yellow-400 font-bold retro-font text-xs sm:text-sm">{game.stats.rating}/5</div>
-                    <div className="text-gray-400 text-xs retro-font">CALIFICACIÓN</div>
-                  </div>
-                </div>
-
                 {/* Game Features */}
                 <div className="space-y-3 sm:space-y-4">
-                  <h4 className="text-white font-semibold retro-font text-base sm:text-lg">✨ CARACTERÍSTICAS DEL JUEGO:</h4>
+                  <h4 className="text-white font-semibold retro-font text-base sm:text-lg">✨ GAME FEATURES:</h4>
                   <div className="space-y-2 sm:space-y-3">
                     {game.features.map((feature, index) => (
                       <div
@@ -312,7 +303,7 @@ export default function GamesSection() {
                   className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 border-2 border-red-400 retro-font text-sm sm:text-base lg:text-lg py-3 sm:py-4"
                 >
                   <Link href={game.playLink} target="_blank">
-                    <Gamepad2 className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />🪳 JUGAR KOKOTHEROACH AHORA
+                    <Gamepad2 className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />🪳 PLAY KOKOTHEROACH NOW
                   </Link>
                 </Button>
               </CardContent>

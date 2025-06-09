@@ -5,9 +5,9 @@ import Link from "next/link"
 
 export default function ContactSection() {
   const telegramMessage = encodeURIComponent(
-    "Hey! I saw your website and I'm interested in developing a video game with you.",
+    "🎮 Hello! I saw your video games and I'm interested in developing one for my cryptocurrency. Let's talk! 🚀💰",
   )
-  const telegramLink = `https://t.me/yourgamestudio?text=${telegramMessage}`
+  const telegramLink = `https://t.me/SMKstyle?text=${telegramMessage}`
 
   return (
     <section className="py-20 px-4 bg-slate-800/50">
